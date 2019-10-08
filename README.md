@@ -3,4 +3,7 @@
  - Automates CFD analysis  
  - Java based, tested up to Star-CM 13.06
 # Usage
- - In command line: starccm+ -batch macro.java testFile.sim
+ - (command line) > starccm+ -batch macro.java testFile.sim
+ - Applicable to both Windows and Linux operating system
+ # Contact Info (requests or bug reporting)
+ - hoonjet@gmail.com 
