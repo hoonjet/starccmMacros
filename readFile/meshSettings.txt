@@ -1,0 +1,3 @@
+Base Size	10.0
+Number of Prism Layers	5
+Prism Layer Absolute Size	2.0
