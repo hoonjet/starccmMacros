@@ -25,8 +25,8 @@ public class run extends StarMacro {
 	String filePath = fullPath.substring(0,fullPath.length()-name.length());
 	String fileName = name;
 
-    /* run Simulation */
-    simulation_0.getSimulationIterator().run();
+        /* run Simulation */
+        simulation_0.getSimulationIterator().run();
 	
 	/* close simulation */	
 	simulation_0.kill();
