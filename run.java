@@ -3,6 +3,8 @@
 package macro;
 
 import java.util.*;
+
+// Additional package might be required based on the sim file you want to solve.
 import star.common.*;
 import star.base.neo.*;
 import star.meshing.*;
