@@ -1,5 +1,5 @@
-// STAR-CCM+ macro: run.java
-// Written by STAR-CCM+ 13.06.010
+// Use monitor values instead of report values to get an averaged value
+
 package macro;
 
 import java.util.*;
