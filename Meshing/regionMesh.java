@@ -1,3 +1,5 @@
+// Note: "Region mesh" is not recommended by Siemens (no updates from 11.06)
+
 package macro;
 
 import java.util.*;
