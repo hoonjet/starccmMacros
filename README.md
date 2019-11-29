@@ -1,6 +1,5 @@
 # Star CCM Macros
- - Macros for Star CCM+ (CFD tool by Siemens) 
- - Automates CFD analysis  
+ - Automation macros for Star-CCM+ 
  - Java based, tested up to Star-CCM+ 13.06
 # Usage
  - (command line) > starccm+ -batch macro.java testFile.sim
