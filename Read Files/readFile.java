@@ -1,6 +1,7 @@
 /* readFile.java
    read text file that contains mesh setting info, then print it to the CCM console
- 
+   Use Scanner in java.util
+   Please check meshSettings.txt for the format of an input file
  */
 
 
@@ -16,12 +17,15 @@ public class readFile extends StarMacro {
 
     
     public void execute() {
-		String fileName = "meshSettings.txt"; // File that contains Mesh information
+	readTextFiles();    
+    }
+    public void readTextFiles(){
+	String fileName = "meshSettings.txt"; // File that contains Mesh information
         printFileInfo(resolvePath(fileName));
 		
         double baseSize = readFileDouble(resolvePath(fileName), "Base Size");
-		double numPrismLayers = readFileDouble(resolvePath(fileName), "Number of Prism Layers");
-		double sizePrismLayer = readFileDouble(resolvePath(fileName), "Prism Layer Absolute Size");
+	double numPrismLayers = readFileDouble(resolvePath(fileName), "Number of Prism Layers");
+	double sizePrismLayer = readFileDouble(resolvePath(fileName), "Prism Layer Absolute Size");
     }
 
     public double readFileDouble(String file, String pattern) {
