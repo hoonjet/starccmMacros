@@ -12,13 +12,13 @@ import star.base.report.*;
 import star.flow.*;
 
 
-public class postProcessing extends StarMacro {
+public class exportValuesWithMonitor extends StarMacro {
 
   public void execute() {
-    execute0();	
+    exportValue();	
   }
   
-  private void execute0() {
+  private void exportValue() {
 
     Simulation simulation_0 = getActiveSimulation();
 		
