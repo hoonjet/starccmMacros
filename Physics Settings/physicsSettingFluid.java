@@ -15,31 +15,31 @@ import star.turbulence.*;
 public class physicsSettingFluid extends StarMacro {
 
 
-    public void execute() {
+    	public void execute() {
 		physicsSettingFluid();
 	}
 	
 	public void physicsSettingFluid(){
 
-		// Get active simulation
+	// Get active simulation
         Simulation sim = getActiveSimulation();
         String dir = sim.getSessionDir();
         String sep = System.getProperty("file.separator");
         
         // Generate a new (fluid) continuum, then rename it to "Fluid"
-		// Note: the Name of physics contina must be unique
-		PhysicsContinuum fluidPhys = sim.getContinuumManager().createContinuum(PhysicsContinuum.class);
-		fluidPhys.setPresentationName("Fluid");
+	// Note: the Name of physics contina must be unique
+	PhysicsContinuum fluidPhys = sim.getContinuumManager().createContinuum(PhysicsContinuum.class);
+	fluidPhys.setPresentationName("Fluid");
         
         // Select up a model: Should be specified by users
-		// In this example,
-		/* 	1) Steady
-			2) Single component gas
-			3) Segregated Flow
-			4) k-e turbulence model with 2 layer y+ wall model 
-			5) Cell qaulity remediation
-			have been selected
-		*/
+	// In this example,
+	/* 	1) Steady
+		2) Single component gas
+		3) Segregated Flow
+		4) k-e turbulence model with 2 layer y+ wall model 
+		5) Cell qaulity remediation
+		have been selected
+	*/
         fluidPhys.enable(SteadyModel.class);
         fluidPhys.enable(SingleComponentGasModel.class);
         fluidPhys.enable(SegregatedFlowModel.class);
