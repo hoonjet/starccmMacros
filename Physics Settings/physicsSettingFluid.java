@@ -56,12 +56,12 @@ public class physicsSettingFluid extends StarMacro {
         // Setting up initial conditions
           // 1) Initial temperature
 		fluidPhys.getInitialConditions().get(StaticTemperatureProfile.class).getMethod(ConstantScalarProfileMethod.class).getQuantity().setValue(500.0);
-		  // 2) turbulence velocity scale	
+	  // 2) turbulence velocity scale	
 		fluidPhys.getInitialConditions().get(TurbulentVelocityScaleProfile.class).getMethod(ConstantScalarProfileMethod.class).getQuantity().setValue(2.0);
           // 3) the velocity profile
 		fluidPhys.getInitialConditions().get(VelocityProfile.class).getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(1.0, 0.0, 0.0);
 		
-		// Save a file
-		sim.saveState(dir + sep + "_physics.sim");
+	// Save a file
+	sim.saveState(dir + sep + "_physics.sim");
 	}
 }
