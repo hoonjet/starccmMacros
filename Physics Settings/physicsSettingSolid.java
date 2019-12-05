@@ -11,8 +11,6 @@ import star.metrics.*;
 import star.segregatedenergy.*;
 
 
-
-
 public class physicsSettingSolid extends StarMacro {
 
 
@@ -25,6 +23,7 @@ public class physicsSettingSolid extends StarMacro {
 	// Get active simulation
         Simulation sim = getActiveSimulation();
         String dir = sim.getSessionDir();
+	String name = simulation_0.getPresentationName();	
         String sep = System.getProperty("file.separator");
 		
 	// Generate a new (solid) continuum, then rename it to "Solid"
@@ -61,7 +60,7 @@ public class physicsSettingSolid extends StarMacro {
         
  
 	// Save a file
-	sim.saveState(dir + sep + "_physics.sim");
+	sim.saveState(dir + name + "_physics.sim");
 	}
 }
 
