@@ -23,6 +23,7 @@ public class physicsSettingFluid extends StarMacro {
 
 	// Get active simulation
         Simulation sim = getActiveSimulation();
+	String name = simulation_0.getPresentationName();	
         String dir = sim.getSessionDir();
         String sep = System.getProperty("file.separator");
         
@@ -62,6 +63,6 @@ public class physicsSettingFluid extends StarMacro {
 		fluidPhys.getInitialConditions().get(VelocityProfile.class).getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(1.0, 0.0, 0.0);
 		
 	// Save a file
-	sim.saveState(dir + sep + "_physics.sim");
+	sim.saveState(dir + name + "_physics.sim");
 	}
 }
