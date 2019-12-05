@@ -21,7 +21,7 @@ public class meshSettingAndExecution extends StarMacro {
     
     public void execute() {
         meshSettings();			
-		generateMesh();		
+	generateMesh();		
     }
     
     private void meshSettings() {
