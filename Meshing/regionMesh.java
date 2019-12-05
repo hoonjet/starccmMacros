@@ -29,7 +29,7 @@ public class regionMesh extends StarMacro {
     meshPipelineController_0.generateVolumeMesh();
 	
 	/* save and close simulation */
-	simulation_0.saveState(name+"_mesh.sim");
+	simulation_0.saveState(resolvePath(name)+"_mesh.sim");
 
     /* close simulation */	
 	simulation_0.kill();
