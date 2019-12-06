@@ -65,7 +65,7 @@ public class physicsSettingSolid extends StarMacro {
         
  
 	// Save a file
-	sim.saveState(dir + name + "_physics.sim");
+	sim.saveState(resolvePath(name) + "_physics.sim");
 	}
 }
 
