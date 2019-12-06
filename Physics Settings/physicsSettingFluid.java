@@ -7,7 +7,9 @@ import star.common.*;
 import star.energy.*;
 import star.flow.*;
 import star.keturb.*;
+import star.material.*;
 import star.metrics.*;
+import star.segregatedenergy.*;
 import star.segregatedflow.*;
 import star.turbulence.*;
 
