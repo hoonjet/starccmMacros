@@ -23,7 +23,7 @@ public class physicsSettingSolid extends StarMacro {
 	// Get active simulation
         Simulation sim = getActiveSimulation();
         String dir = sim.getSessionDir();
-	String name = simulation_0.getPresentationName();	
+	String name = sim.getPresentationName();	
         String sep = System.getProperty("file.separator");
 		
 	// Generate a new (solid) continuum, then rename it to "Solid"
