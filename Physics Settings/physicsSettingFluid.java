@@ -65,6 +65,6 @@ public class physicsSettingFluid extends StarMacro {
 		fluidPhys.getInitialConditions().get(VelocityProfile.class).getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponents(1.0, 0.0, 0.0);
 		
 	// Save a file
-	sim.saveState(dir + name + "_physics.sim");
+	sim.saveState(resolvePath(name) + "_physics.sim");
 	}
 }
