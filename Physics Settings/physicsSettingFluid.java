@@ -23,7 +23,7 @@ public class physicsSettingFluid extends StarMacro {
 
 	// Get active simulation
         Simulation sim = getActiveSimulation();
-	String name = simulation_0.getPresentationName();	
+	String name = sim.getPresentationName();	
         String dir = sim.getSessionDir();
         String sep = System.getProperty("file.separator");
         
