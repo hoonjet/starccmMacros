@@ -1,0 +1,51 @@
+== JMSE
+
+
+[1] Y. Li and A. Delsante, Derivation of capture efficiency of kitchen range hoods in a confined space, Building and Environment, 31(5) (1996) 461-468.
+[2] H.P. Thiebaud, M.G. Knize, P.A. Kuzmicky, D.P. Hsieh and J.S. Felton, Airbone mutagens produced by frying beef, pork and a soy-based food, Food Chemical Toxicology, 33(10) (1995) 821-828.
+[3] S. Vainiotalo and K. Matveinen, Cooking fumes as a hygienic problem in the food and catering industries,American Industrial Hygiene Association Journal, 54(7) (1993) 376-382.
+[4] M. Reggio and J. Abanto, Numerical investigation of the flow in a kitchen hood system. Building and Environment, 41(1) (2006) 288-296.
+[5] Y. Li, A. Delsante and J. Symons, Residential kitchen range hoods-buoyancy capture principle and capture efficiency revisited, Indoor Air, 7 (1997) 151-157.
+[6] Z. Popiolek, S. Trzeciakiewicz and S. Mierzwinski, Improvement of a plume volume flux calculation method, Proceedings of the 6th International Conference on Air Distribution in Rooms (1998) 423-430.
+[7] U. Madsen, N.O. Breum and P.V. Nielsen, Local exhaust ventilation—a numerical and experimental study of capture efficiency, Building and Environment, 29(3) (1994) 319–323. 
+[8] B. Geerinck, P. Wouters and L. Vandaele, Efficiency measurement of kitchen hoods, Air Infiltration Review, 13(1)(1991) 15–17.
+[9] Q. Chen, K. Lee, S. Mazumdar, S. Poussou, L. Wang, M. Wang and Z. Zhang, Ventilation performance prediction for buildings: Model assessment, Building and Environment, 45(2) (2010), 295–303.
+[10] International Electrotechnical Commission: Cooking fume extractors - Methods for measuring performance (Standard No. 61591:2020), (2019)
+[11] C. Leeand and K. Lim, A numerical study on the characteristics of flow field, temperature and concentration distribution according to changing the shape of separation plate of kitchen hood system, Energy and Buildings, 40(1)(2008) 175-184.
+[12] Q. Chen, Comparison of different k-ε models for indoor air flow computations, Numerical Heat Transfer, 28(B)(1995) 353-369.
+[13] C.M. Chiang, C.M. Lai, P.C. Chou and Y. Li, The influence of an architectural design alternative (transoms) on indoor air environment in conventional kitchens in Taiwan. Building and Environment, 35(1) (2000) 579-585.
+[14] C. Guangyu, A. Hazim, Y. Runming, F. Yunqing, S. Kai, K. Risto and J. Zhang. A review of the performance of different ventilation and airflow distribution systems in buildings, Building and Environment, 73(2014) 171-186.
+[15] Y. Zhao, A. Li, P. Tao and R. Gao. The impact of various hood shapes, and side panel and exhaust duct arrangements, on the performance of typical Chinese style cooking hoods,
+Building Simulation, 6(2) (2013) 139-149.
+
+Changhoon Oh is currently a Staff Engineer at Samsung Research. He received Ph.D., in Mechanical Engineering from Massachusetts Institute of Technology in 2016. His research interests are computational fluid dynamics and heat transfer. 
+Sangjin Kim, is currently a Staff Engineer at Samsung Electronics. He received his M.S. in Mechanical Engineering from Ajou Univeristy, Korea. His main research area is heat transfer in home appliances.
+Sangjin Lee, is currently a Principal Engineer at Samsung Electronics. He received his M.S. in Mechanical Engineering from Jeonju Univeristy, Korea. His main research area is thermo-fluid system design in home appliances.
+Eung Ryeol Seo, Ph.D., is currently a Master at Samsung Electronics Korea. He received his Ph.D. in Mechanical Engineering from Texas Tech University in 2001. His main research area is CFD-based fan/duct design for home appliances.
+
+
+== Build Simul
+
+Harris M, Karper E, Stacks G, et al. (2001). Writing labs and the Hollywood connection. Journal of Film Writing, 44: 213–245. Journal article
+Mahdavi A, Spasojevic B (2007). Incorporating simulation into building systems control logic. In: Proceedings of the 10th International Building Performance Simulation Association Conference and Exhibition (BS2007), Beijing, China, pp.1175–1181. Paper in proceedings
+
+
+Doe J (1999). Title of  subordinate document. In: The dictionary of substances and their effects. Royal Society of Chemistry. Available at http://www.rsc.org/dose/title. Accessed 15 Jan 1999. Online document https://standards.iteh.ai/catalog/standards/clc/f3933f1f-40d7-4248-b46a-558592e800f2/en-iec-61591-2020
+
+
+[1] Li Y, Delsante A (1996). Derivation of capture efficiency of kitchen range hoods in a confined space. Building and Environment, 31(5): 461-468.
+[2] Thiebaud HP, Knize MG, Kuzmicky PA, Hsieh DP Felton JS (1995). Airbone mutagens produced by frying beef, pork and a soy-based food. Food Chemical Toxicology, 33(10):821-828.
+[3] Vainiotalo S, Matveinen K (1993). Cooking fumes as a hygienic problem in the food and catering industries. American Industrial Hygiene Association Journal, 54(7): 376-382.
+[4] Reggio M, Abanto J (2006). Numerical investigation of the flow in a kitchen hood system. Building and Environment, 41(1): 288-296.
+[5] Li Y, Delsante A, Symons J (1997). Residential kitchen range hoods-buoyancy capture principle and capture efficiency revisited. Indoor Air, 7: 151-157.
+[6] Popiolek Z, Trzeciakiewicz S, and Mierzwinski S (1998). Improvement of a plume volume flux calculation method. In:Proceedings of the 6th International Conference on Air Distribution in Rooms, Stockholm, Sweden, pp.423-430.
+[7] Madsen U, Breum NO, Nielsen PV (1994). Local exhaust ventilation—a numerical and experimental study of capture efficiency. Building and Environment, 29(3): 319–323. 
+[8] Geerinck B, Wouters P, Vandaele L (1991). Efficiency measurement of kitchen hoods. Air Infiltration Review, 13(1): 15–17.
+[9] Chen Q, Lee K, Mazumdar S, Poussou S, Wang L, Wang M, Zhang Z (2010). Ventilation performance prediction for buildings: Model assessment. Building and Environment, 45(2): 295–303.
+[10] International Electrotechnical Commission. (2019). Cooking fume extractors - Methods for measuring performance (Standard No. 61591:2020). Retrieved from https://standards.iteh.ai/catalog/standards/clc/f3933f1f-40d7-4248-b46a-558592e800f2/en-iec-61591-2020
+[11] Leeand C, Lim K (2008). A numerical study on the characteristics of flow field, temperature and concentration distribution according to changing the shape of separation plate of kitchen hood system. Energy and Buildings, 40(1): 175-184.
+[12] Chen Q (1995). Comparison of different k-ε models for indoor air flow computations. Numerical Heat Transfer, 28(B): 353-369.
+[13] Chiang CM, Lai CM, Chou PC,  Li Y (2000). The influence of an architectural design alternative (transoms) on indoor air environment in conventional kitchens in Taiwan. Building and Environment, 35(1): 579-585.
+[14] Guangyu C, Hazim A, Runming Y, Yunqing F, Kai S, Risto K, Zhang J (2014). A review of the performance of different ventilation and airflow distribution systems in buildings. Building and Environment, 73: 171-186.
+[15] Zhao Y, Li A, Tao P, Gao R (2013). The impact of various hood shapes, and side panel and exhaust duct arrangements, on the performance of typical Chinese style cooking hoods. 
+Building Simulation, 6(2): 139-149.
