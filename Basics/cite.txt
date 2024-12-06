@@ -1,14 +1,160 @@
-1	2023.4	Ongoing	Developmening a Capacitive Deionization module for house hold appliances	Samsung Electronics		The project involves developing modules utilizing Capacitive Deionization (CDI).  CDI has primarily been implemented in business-to-business facilities like sewage treatment plants, but this project aims to create the CDI module suitable for the consumer electronics.	When the project started in 2023, I was responsible for the design of modules and fluid dynamics simulation. From 2024, I have been promoted to a manager. As a manager, I have taken on additional duties such as managing the team, collaborating with relevant internal divisions.	
-2	2022.5	2022.9	Design study project for a new hair dryer	Samsung Electronics		This short-term concept study project led by the Advanced R&Dt Team. The project aimed to create and validate a hair dryer concept distinct from existing form factors, offering a new experience to customers.	To create a new form factor for hair dryers, the team members and I proposed concepts applying physical phenomena such as the Coanda effect and Fluidic Oscillation after conducting literature reviews. I used computational fluid dynamics to verify the feasibility of these ideas. At the completion of the project, we built prototypes to further validate their performance.	
-3	2021.5	2022.6	Development of residential (30 inch) kkitchen hood	Samsung Electronics		The project entailed the development of a standard kitchen appliance, specifically a 30-inch range hood. This was our first time independently developing a range hood instead of relying on ODM. The key challenge was to achieve higher airflow rates than competitors' products while maintaining low noise levels	As a CFD engineer, I performed flow analysis and verified the results through wind tunnel testing. Through fluid dynamics simulations, I researched how contaminants spread in kitchens and explored effective capture methods. These insights were incorporated into the product development process	"1) Product Link: https://www.samsung.com/us/home-appliances/cooktops-and-hoods/hoods/30-bespoke-smart-wall-mount-hood-with-lcd-display-in-clean-deep-charcoal-nk30cb700w33aa/
-2) Paper: https://link.springer.com/article/10.1007/s12206-023-0724-y
-3) Patent: "
-4	2016.9	2019.5	DSF(Dynamic Skip Fire) for the lightweight vehicles	Tula Technology		Tula Technology is a silicon valley located start-up dedicated to researching and developing Dynamic Skip Fire (DSF), an advanced cylinder deactivation technology. Our aim is to minimize the issues of vibration and noise associated with traditional cylinder deactivation while improving engine fuel efficiency by over 15% through the development of innovative engine control algorithms.	As a test engineer, I worked on adapting the initial DSF algorithm developed for V8 engines to inline four-cylinder engines. My main responsibilities included designing experiments, analyzing results, and generating reports. During this process, I collaborated with companies like Delphi and various global automobile Original Equipment Manufacturers (OEMs), including China's Great Wall Motors	1) https://www.tulatech.com/zh/combustion-engine/
-5	2013.9	2016.8	Study of particulate matter formation in direct injection spark ignition engines during cold start	MIT (MIT Engine and Fuels Research Consortium)		This project was funded by the MIT Engine and Fuels Research Consortium. It aims to classify the mechanisms behind particulate matter generation in DISI engines under cold-start conditions and quantify the contribution of each mechanism.	This project served as the subject of my doctoral dissertation. Initially, I studied the occurrence of particulate matter under cold start conditions. Then, I investigated the behavior of particulate matter generation when the engine accelerated under cold start conditions. Lastly, I conducted combustion tests with non-particulate emitting fuels (such as hydrogen) and compared the results for quantitative analysis.	1) https://web.mit.edu/sloan-auto-lab/research.html
-6	2013.1	2013.8	Invesigation on particulate emissions of light duty vehicles	GS Caltex		The purpose of this project was to assess the amount of air pollutants emitted by passenger vehicles. We selected representative vehicle types and testing methods based on market trends. Vehicle tests were then conducted accordingly, allowing us to quantitatively evaluate their impact on air pollution.	I was involved in designing experiments, analyzing data, wirting reports, and reported findings to upper management. To choose representative car models, I conducted literature reviews and market surveys before the research project began. Additionally, I communicated with the marketing and customer relations departments within the company regarding these matters	1) https://link.springer.com/article/10.1007/s12239-015-0091-5
-7	2012.2	2012.12	Research on mitigating emissions of tehicles by tuing fuel properties	GS Caltex		This project examined whether pollutant emissions from automobiles, particularly particulate matter, could be reduced by modifying the physical properties of fuel oil. Since the project was conducted by an oil refinery company, finding ways to reduce pollutants without increasing production costs for fuel oil was the primary objective.	In this project, I was responsible for planning the experiments and analyzing the results. Since the project involved testing with cars on a chassis dynamometer, I also played the role of a test engineer and handled communication with operators including drivers during the process.	1) https://link.springer.com/article/10.1007/s12239-013-0091-2
-8	2011.1	2011.9	Research on carbon deposit in gasoline direct injection engine	GS Caltex		"The research project focused on studying carbon deposits formed in intake ports and combustion chambers of gasoline direct injection engines. 
-The main ojbective of the study was to investigate how fuel properties and engine load affect carbon deposit formation"	As a reader for the research project, I took the lead in conducting all processes from literature review to experiment design, result organization, and conclusion drawing. The research outcome was presented at FISITA, an international conference in the automotive field, and I also received 6-Sigma Green Belt certification through this project.	1) https://link.springer.com/chapter/10.1007/978-3-642-33750-5_45
-9	2008.3	2009.12	Development of DME-LPG Dual fuel HCCI engine	"KAIST /
-Korea LPG industry association"		This project aimed to develop a dual fuel combustion HCCI engine using alternative fuels such as DME and LPG, with the goal of developing an engine that can be applied to passenger vehicles	My role in this project was to evaluate the performance changes of the DME-LPG HCCI engine according to different LPG compositions. As the task leader, I designed and conducted experiments and analyzed the results. By the end of the project, we successfully identified the optimal LPG composition for achieving the best performance in the DME-LPG HCCI engine	"1) https://library.kaist.ac.kr/search/detail/view.do?bibCtrlNo=418925&flag=dissertation
-2) https://www.sae.org/publications/technical-papers/content/2010-01-0336/"
+
+===========================================================================================================================================================================================================
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+from data_raw import getData_byCMH, getData_byDelay
+
+sen01, sen03, sen05, sen10 = getData_byCMH()
+delay_0, delay_2, delay_3, delay_5, delay_6, delay_10 = getData_byDelay()
+
+
+
+# # Sensor 1: Side
+# # Sensor 3: User
+# # Sensor 5: Ceiling
+# # Sensor 10: Front
+
+# col_names_0CMH = ['Time', 'Front','Side', 'Ceiling','User']
+
+
+col_names_flowrate = ['Time_0CMH','0CMH','Time_200CMH','200CMH','Time_300CMH','300CMH','Time_400CMH','400CMH','Time_500CMH','500CMH','Time_600CMH','600CMH','Time_70CMH','700CMH','Time_800CMH','800CMH']
+col_names_flowrate_03 = ['Time','0CMH','200CMH','300CMH','400CMH','500CMH','600CMH','700CMH','800CMH']
+
+df_01 = pd.DataFrame(sen01,columns = col_names_flowrate)
+df_03 = pd.DataFrame(sen03,columns = col_names_flowrate_03)
+df_05 = pd.DataFrame(sen05,columns = col_names_flowrate)
+df_10 = pd.DataFrame(sen10,columns = col_names_flowrate)
+#df_flowrate_list = [df_01,df_03,df_05,df_10]
+
+
+#===============================================================================
+# PM 2.5 without hood operation
+plt.plot(df_10['Time_0CMH'], df_10['0CMH'], df_01['Time_0CMH'], df_01['0CMH'], df_05['Time_0CMH'], df_05['0CMH'], df_03['Time'], df_03['0CMH'])
+plt.xlabel('Time (s)')
+plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,4000)
+plt.legend(['Front', 'Side','Ceiling','User'])
+plt.show()
+#===============================================================================
+
+#===============================================================================
+# PM 2.5 with hood operation - Front
+plt.plot(df_10['Time_0CMH'], df_10['0CMH'],df_10['Time_200CMH'], df_10['200CMH'],df_10['Time_400CMH'], df_10['400CMH'],df_10['Time_600CMH'], df_10['600CMH'],df_10['Time_800CMH'], df_10['800CMH'])
+plt.xlabel('Time (s)')
+plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,4000)
+plt.legend(['0CMH','200CMH','400CMH','600CMH','800CMH'])
+# 2837 769 508 341 276
+plt.show()
+
+# PM 2.5 with hood operation - Side
+plt.plot(df_01['Time_0CMH'], df_01['0CMH'],df_01['Time_200CMH'], df_01['200CMH'],df_01['Time_300CMH'], df_01['300CMH'],df_01['Time_600CMH'], df_01['600CMH'],df_01['Time_800CMH'], df_01['700CMH'])
+plt.xlabel('Time (s)')
+plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,4000)
+plt.legend(['0CMH','200CMH','400CMH','600CMH','800CMH'])
+plt.show()
+
+# PM 2.5 with hood operation - Ceiling
+plt.plot(df_05['Time_0CMH'], df_05['0CMH'],df_05['Time_200CMH'], df_05['200CMH'],df_05['Time_500CMH'], df_05['500CMH'],df_05['Time_600CMH'], df_05['600CMH'],df_05['Time_800CMH'], df_05['800CMH'])
+plt.xlabel('Time (s)')
+plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,4000)
+plt.legend(['0CMH','200CMH','400CMH','600CMH','800CMH'])
+plt.show()
+
+# PM 2.5 with hood operation - User
+plt.plot(df_03['Time'], df_03['0CMH'],df_03['Time'], df_03['200CMH'],df_03['Time'], df_03['400CMH'],df_03['Time'], df_03['500CMH'],df_03['Time'], df_03['800CMH'])
+plt.xlabel('Time (s)')
+plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,4000)
+plt.legend(['0CMH','200CMH','400CMH','600CMH','800CMH'])
+plt.show()
+#===============================================================================
+
+#===============================================================================
+# Average PM 2.5 concentration at the ceiling
+
+data_avgPM = np.array([0.1, 1972, 200, 723, 300, 546, 400,509, 500,239, 600, 223, 700, 210, 800,123]).reshape(-1,2)
+col_names_avgPM = ['flow', 'PM']
+df_avgPM = pd.DataFrame(data_avgPM,columns = col_names_avgPM)
+
+x = data_avgPM[:,0]
+y = data_avgPM[:,1]
+log_x = np.log(data_avgPM[:,0])
+log_y =  np.log(data_avgPM[:,1])
+coefficients = np.polyfit(x, log_y,1)
+x = np.linspace(0.1 ,800, 80)
+
+fit = coefficients[0]*x + coefficients[1]
+
+plt.scatter(df_avgPM['flow'], df_avgPM['PM'])
+plt.plot(x, np.exp(fit),'--')
+plt.xlabel('Flow rate (m$^3$/h)')
+plt.ylabel('Average PM 2.5 Concentration (μg/m$^3$)')
+plt.ylim(0,2000)
+plt.xlim(-10,810)
+
+plt.show()
+#===============================================================================
+
+print(sen01.shape)
+
+
+for df in df_flowrate_list:
+    ax = df.plot(x='Time', y=['0CMH','200CMH','300CMH','400CMH','500CMH','600CMH','700CMH','800CMH'])    
+    ax.set_ylabel('PM 2.5 Concentration (μg/m$^3$)')
+    ax.set_ylim(0,4000)
+    #print([df.mean(), df.max()])
+
+
+
+col_names_hoodDelay = ['Time', 'Sensor01', 'Sensor03', 'Sensor05', 'Sensor10']
+
+
+
+df_0min = pd.DataFrame(delay_0,columns = col_names_hoodDelay)
+df_2min = pd.DataFrame(delay_2,columns = col_names_hoodDelay)
+df_3min = pd.DataFrame(delay_3,columns = col_names_hoodDelay)
+df_5min = pd.DataFrame(delay_5,columns = col_names_hoodDelay)
+df_6min = pd.DataFrame(delay_6,columns = col_names_hoodDelay)
+df_10min = pd.DataFrame(delay_10,columns = col_names_hoodDelay)
+df_delay_list = [df_0min,df_2min,df_3min,df_5min,df_6min,df_10min]
+
+plot_vars = ['Sensor10','Sensor01', 'Sensor05', 'Sensor03']
+
+for plot_var in plot_vars:
+    plt.plot(df_0min['Time'], df_0min[plot_var],df_2min['Time'], df_2min[plot_var],df_5min['Time'], df_5min[plot_var], df_6min['Time'], df_6min[plot_var],df_3min['Time'], df_3min[plot_var],df_10min['Time'], df_10min[plot_var])
+    plt.xlabel('Time (s)')
+    plt.ylabel('PM 2.5 Concentration (μg/m$^3$)')
+    plt.ylim(0,4000)
+    plt.xlim(0,3000)
+    plt.legend(['0 min', '2 mins', '3 mins', '5 mins', '6 mins', '10 mins'])
+    plt.show()
+
+
+#===============================================================================
+# Average PM 2.5 concentration and recovery (at the ceiling)
+
+data_PM_Recover = np.array([223, 6.2, 377, 8.4, 496, 9.7, 772, 14.2, 951, 18.85, 2242, 39.7 ]).reshape(-1,2)
+col_PM_Recover = ['PM', 'minutes']
+df_PM_Recover = pd.DataFrame(data_PM_Recover,columns = col_PM_Recover)
+
+x = data_PM_Recover[:,0]
+y = data_PM_Recover[:,1]
+coefficients = np.polyfit(x, y,1,)
+x = np.linspace(0 ,2500, 100)
+
+#0.0183
+fit = 0.0183*x
+
+plt.scatter(df_PM_Recover['minutes'], df_PM_Recover['PM'])
+plt.plot(fit,x,'--')
+plt.ylabel('Average PM 2.5 Concentration (μg/m$^3$)')
+plt.xlabel('Recovery Time (minutes)')
+plt.ylim(0,2500)
+plt.xlim(0,50)
+
+plt.show()
