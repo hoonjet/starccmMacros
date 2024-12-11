@@ -1,1 +1,21 @@
 
+
+
+def getData_byCMH():
+    sen01 = np.array(Sensor01).reshape(-1,16)
+    sen03 = np.array(Sensor03).reshape(-1,9)
+    sen05 = np.array(Sensor05).reshape(-1,16)
+    sen10 = np.array(Sensor10).reshape(-1,16)
+    return sen01, sen03, sen05, sen10
+
+def getData_byDelay():
+    delay_0 = np.array(delay_0min).reshape(-1,5)
+    delay_2 = np.array(delay_2min).reshape(-1,5)
+    delay_3 = np.array(delay_3min).reshape(-1,5)
+    delay_5 = np.array(delay_5min).reshape(-1,5)
+    delay_6 = np.array(delay_6min).reshape(-1,5)
+    delay_10 = np.array(delay_10min).reshape(-1,5)
+    return delay_0, delay_2, delay_3, delay_5, delay_6, delay_10
+
+
+
